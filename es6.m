@@ -11,3 +11,7 @@ Erel = abs(Ax-Bx)./abs(Bx); % err relativo calcolato da matlab
 
 u = eps/2;
 Erel_teorico = (abs(x+1) + abs(x) + 1)*u;
+
+figure(1)
+loglog( x,Erel,'b-',x,Erel_teorico,'r-')
+legend('errore di matlab', 'stima teorica')
